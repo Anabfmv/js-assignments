@@ -23,7 +23,7 @@
  *    [0, 1, 2, 3, 4, 5], 5    => 5
  */
 function findElement(arr, value) {
-   throw new Error('Not implemented');
+  return arr.indexOf(value);
 }
 
 /**
@@ -39,6 +39,7 @@ function findElement(arr, value) {
  */
 function generateOdds(len) {
    throw new Error('Not implemented');
+  
 }
 
 
@@ -54,7 +55,8 @@ function generateOdds(len) {
  *    [] => [] 
  */
 function doubleArray(arr) {
-   throw new Error('Not implemented');
+   //throw new Error('Not implemented');
+   return arr.concat(arr);
 }
 
 
@@ -70,7 +72,8 @@ function doubleArray(arr) {
  *    [] => [] 
  */
 function getArrayOfPositives(arr) {
-   throw new Error('Not implemented');
+   //throw new Error('Not implemented');
+   return arr.filter( item => item >0 );
 }
 
 /**
@@ -86,6 +89,7 @@ function getArrayOfPositives(arr) {
  */
 function getArrayOfStrings(arr) {
    throw new Error('Not implemented');
+   //return arr.filter( item => arr[item]>=0);
 }
 
 /**
@@ -117,6 +121,7 @@ function removeFalsyValues(arr) {
  */
 function getUpperCaseStrings(arr) {
    throw new Error('Not implemented');
+   //arr.map(item => item.toLocaleUpperCase());
 }
 
 
