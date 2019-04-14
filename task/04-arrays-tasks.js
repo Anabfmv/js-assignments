@@ -38,10 +38,10 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-   throw new Error('Not implemented');
-   // let arr = new Array(len*2);
-   // arr.filter
-  
+   //throw new Error('Not implemented');
+   return new Array(len).fill(0)
+   .map((_, i) => 2*i+1);
+
 }
 
 
@@ -90,8 +90,8 @@ function getArrayOfPositives(arr) {
  *    [ 'cat, 'dog', 'raccon' ] => [ 'cat', 'dog', 'racoon' ]
  */
 function getArrayOfStrings(arr) {
-   throw new Error('Not implemented');
-   //return arr.filter( item => arr[item]>=0);
+   //throw new Error('Not implemented');
+   return arr.filter(word => word.length > 1);
 }
 
 /**
@@ -109,6 +109,8 @@ function getArrayOfStrings(arr) {
  */
 function removeFalsyValues(arr) {
    throw new Error('Not implemented');
+  
+
 }
 
 /**
@@ -123,7 +125,7 @@ function removeFalsyValues(arr) {
  */
 function getUpperCaseStrings(arr) {
    throw new Error('Not implemented');
-   //arr.map(item => item.toLocaleUpperCase());
+   //return arr.map((item, arr) => item.value.toUpperCase());
 }
 
 
