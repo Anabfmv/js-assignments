@@ -80,7 +80,20 @@ function isLeapYear(date) {
  *    Date(2000,1,1,10,0,0),  Date(2000,1,1,15,20,10,453)   => "05:20:10.453"
  */
 function timeSpanToString(startDate, endDate) {
-   throw new Error('Not implemented');
+   //throw new Error('Not implemented');
+   let ne  = startDate;
+   let tol = endDate.getTime()- startDate.getTime();
+   let hor = parseInt(tol/(60*60*1000))%24;
+   let min =parseInt(tol/(60*1000))%60;
+   let sec  =parseInt(tol/(1000))%60;
+   startDate.setHours(hor,min,sec);
+   let yuyuy = ne.toLocaleTimeString();
+   if(endDate. getMilliseconds() == 0){
+      return yuyuy+'.' + '000';
+   }
+   else {
+      return yuyuy+'.' + endDate. getMilliseconds();
+   }
 
 }
 
@@ -99,8 +112,34 @@ function timeSpanToString(startDate, endDate) {
  *    Date.UTC(2016,3,5,21, 0) => Math.PI/2
  */
 function angleBetweenClockHands(date) {
-    throw new Error('Not implemented');
+   //throw new Error('Not implemented');
+    
+   let date1 = new Date(date);
+   let ug = 0.5 * (60*date1.getUTCHours()+date1.getUTCMinutes());
+   let ugmin = 6*date1.getUTCMinutes();
+   let pz = ug - ugmin;   
+
+if(pz==0){
+   return 0;
 }
+else if (pz==90){
+  return Math.PI / 180 *(pz);
+}
+else if(pz==180){
+   let t = Math.PI / 180 *(pz);
+   return t;
+}
+else if(pz>600){
+  return Math.PI / 180 *(720 - pz);
+}
+else if(pz<360){
+  return  Math.PI / 180 *(360 - pz);
+}
+else{
+  return Math.PI / 180 *(pz-360);
+}
+}
+
 
 
 module.exports = {

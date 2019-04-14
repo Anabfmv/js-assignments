@@ -39,6 +39,8 @@ function findElement(arr, value) {
  */
 function generateOdds(len) {
    throw new Error('Not implemented');
+   // let arr = new Array(len*2);
+   // arr.filter
   
 }
 
